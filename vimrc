@@ -1,17 +1,80 @@
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+" Vim syntax file
 
-set guifont=Monospace
-
+" Enable pathogen bundles
 execute pathogen#infect()
-syntax on
-filetype plugin indent on
+execute pathogen#helptags()
 
-set number
-set ruler
+" Vimcasts #24
+" Auto-reload vimrc on save
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
+    filetype plugin indent on
+endif
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-au BufNewFile,BufRead *.ejs set filetype=html
-set nowrap
+
+" Tabstops of 4, and prefer spaces to tabs. Text width 80 and wrapping
+" My dark default background and syntax highlighting.
+:set nocompatible
+:set encoding=utf-8
+:set expandtab
+:set textwidth=80
+:set tabstop=4
+:set softtabstop=4
+:set shiftwidth=4
+:set number
+:set background=dark
+:syntax on
+:set tags=$HOME/.vim/doc/tags
+:set ttyfast
+:set showcmd
+:set showmode
+:set wildmenu
+:set wildmode=list:longest
+:set undofile
+:set splitbelow
+:set splitright
+
+
+" Added based on http://www.perlmonks.org/index.pl?node_id=441738
+:set smarttab
+:set shiftround
+:set autoindent
+:set smartindent
+
+" Highlight Searches
+:set hlsearch
+" Press Space to turn off highlighting and clear any message already displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" 2-space tab-width for HTML
+:autocmd FileType html set shiftwidth=2 tabstop=2 softtabstop=2
+
+" 2-space tab-width for CSS
+:autocmd FileType css set shiftwidth=2 tabstop=2 softtabstop=2
+
+" PHP syntax settings and options
+:let php_sql_query=1
+:let php_htmlInStrings=1
+:let php_folding=1
+:let php_parent_error_close=1
+:let php_parent_error_open=1
+":function! PhpDocLoad()
+":   so $HOME/.vim/php-doc.vim
+":   inoremap <C-P><ESC> :call PhpDocSingle()<CR>i
+":   nnoremap <C-P> :call PhpDocSingle()<CR>
+":   vnoremap <C-P> :call PhpDocRange()<CR>
+":   inoremap ( ()<Left>
+":endfunction
+":autocmd BufNewFile,BufRead *.php call PhpDocLoad()
+
+" PHP parser check (CTRL-L)
+:autocmd FileType php noremap <C-L> :w!<CR>:!php -l %<CR>
+
+" Run file with PHP CLI (CTRL-M)
+:autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>
+
+" 2-space tab-width for JS
+:autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
+
+" Show info in ruler
+set laststatus=2
