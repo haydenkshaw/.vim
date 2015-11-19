@@ -92,3 +92,6 @@ let g:phpcomplete_mappings =
     \     'jump_to_def_vsplit': '<C-W><C-]>',
     \ }
 
+" The escape key is a long ways away. This maps it to the sequence 'jf'
+:map! jf <Esc>
+:inoremap jf <Esc>
