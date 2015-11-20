@@ -10,3 +10,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/vim-phpqa"]
+	path = bundle/vim-phpqa
+	url = https://github.com/joonty/vim-phpqa.git

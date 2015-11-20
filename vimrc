@@ -95,3 +95,13 @@ let g:phpcomplete_mappings =
 " The escape key is a long ways away. This maps it to the sequence 'jf'
 :map! jf <Esc>
 :inoremap jf <Esc>
+
+" vim-phpqa settings
+" Don't run messdetector on save (default = 1)
+let g:phpqa_messdetector_autorun = 0
+
+" Don't run codesniffer on save (default = 1)
+let g:phpqa_codesniffer_autorun = 0
+
+" Show code coverage on load (default = 0)
+let g:phpqa_codecoverage_autorun = 0
