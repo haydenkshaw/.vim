@@ -46,11 +46,11 @@ endif
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
-" 2-space tab-width for HTML
+" 2-space tab-width for HTML, CSS, JS and Ruby
 :autocmd FileType html set shiftwidth=2 tabstop=2 softtabstop=2
-
-" 2-space tab-width for CSS
 :autocmd FileType css set shiftwidth=2 tabstop=2 softtabstop=2
+:autocmd FileType js set shiftwidth=2 tabstop=2 softtabstop=2
+:autocmd FileType ruby set shiftwidth=2 tabstop=2 softtabstop=2
 
 " PHP syntax settings and options
 :let php_sql_query=1
