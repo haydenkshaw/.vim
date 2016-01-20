@@ -111,14 +111,14 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
 endfunction
 
 " JavaScript and derivates
-"call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('coffee', 'Green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('js', 'Green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('jsx', 'Green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('coffee', 'Green', 'none', 'green', '#02023E')
+call NERDTreeHighlightFile('js', 'Green', 'none', 'green', '#02023E')
+call NERDTreeHighlightFile('jsx', 'Green', 'none', 'green', '#02023E')
 " PHP
-call NERDTreeHighlightFile('php', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('php', 'blue', 'none', '#3366FF', '#02023E')
 " Ruby
-call NERDTreeHighlightFile('rb', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('rb', 'Red', 'none', 'red', '#02023E')
+"call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
 
 " Change the colour scheme
 colors darkblue
