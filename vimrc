@@ -50,6 +50,7 @@ endif
 :autocmd FileType html set shiftwidth=2 tabstop=2 softtabstop=2
 :autocmd FileType css set shiftwidth=2 tabstop=2 softtabstop=2
 :autocmd FileType js set shiftwidth=2 tabstop=2 softtabstop=2
+:autocmd FileType jsx set shiftwidth=2 tabstop=2 softtabstop=2
 :autocmd FileType ruby set shiftwidth=2 tabstop=2 softtabstop=2
 
 " PHP syntax settings and options
@@ -72,9 +73,6 @@ endif
 
 " Run file with PHP CLI (CTRL-M)
 :autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>
-
-" 2-space tab-width for JS
-:autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
 
 " Show info in ruler
 set laststatus=2
@@ -112,16 +110,15 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
-call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-" call NERDTreeHighlightFile('php', 'purple', 'none', 'purple', '#151515')
+" JavaScript and derivates
+"call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('js', 'Green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('jsx', 'Green', 'none', 'green', '#151515')
+" PHP
+call NERDTreeHighlightFile('php', 'blue', 'none', '#3366FF', '#151515')
+" Ruby
+call NERDTreeHighlightFile('rb', 'Red', 'none', 'red', '#151515')
+
+" Change the colour scheme
+colors darkblue
