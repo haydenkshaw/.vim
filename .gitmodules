@@ -13,3 +13,9 @@
 [submodule "bundle/vim-phpqa"]
 	path = bundle/vim-phpqa
 	url = https://github.com/joonty/vim-phpqa.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git://github.com/scrooloose/syntastic
+[submodule "bundle/PIV"]
+	path = bundle/PIV
+	url = git://github.com/spf13/PIV

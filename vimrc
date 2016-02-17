@@ -45,13 +45,6 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 execute pathogen#helptags()
 
-" Vimcasts #24
-" Auto-reload vimrc on save
-if has("autocmd")
-    autocmd bufwritepost .vimrc source $MYVIMRC
-    filetype plugin indent on
-endif
-
 " Tabstops of 4, and prefer spaces to tabs. Text width 80 and wrapping
 " My dark default background and syntax highlighting.
 :set nocompatible
@@ -93,73 +86,47 @@ endif
 :autocmd FileType jsx set shiftwidth=2 tabstop=2 softtabstop=2
 :autocmd FileType ruby set shiftwidth=2 tabstop=2 softtabstop=2
 
-" PHP syntax settings and options
-:let php_sql_query=1
-:let php_htmlInStrings=1
-:let php_folding=1
-:let php_parent_error_close=1
-:let php_parent_error_open=1
-":function! PhpDocLoad()
-":   so $HOME/.vim/php-doc.vim
-":   inoremap <C-P><ESC> :call PhpDocSingle()<CR>i
-":   nnoremap <C-P> :call PhpDocSingle()<CR>
-":   vnoremap <C-P> :call PhpDocRange()<CR>
-":   inoremap ( ()<Left>
-":endfunction
-":autocmd BufNewFile,BufRead *.php call PhpDocLoad()
-
-" PHP parser check (CTRL-L)
-:autocmd FileType php noremap <C-L> :w!<CR>:!php -l %<CR>
-
-" Run file with PHP CLI (CTRL-M)
-:autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>
-
-" Show info in ruler
-set laststatus=2
-
-" phpcomplete.vim settings
-let g:phpcomplete_complete_for_unkonwn_classes = 1
-let g:phpcomplete_min_num_of_chars_for_namespace_completion = 1
-let g:phpcomplete_parse_docblock_comments = 1
-let g:phpcomplete_cache_taglists = 1
-let g:phpcomplete_enhance_jump_to_definition = 1
-let g:phpcomplete_mappings =
-    \ {
-    \     'jump_to_def': ',g',
-    \     'jump_to_def_split': '<C-]>',
-    \     'jump_to_def_vsplit': '<C-W><C-]>',
-    \ }
-
 " The escape key is a long ways away. This maps it to the sequence 'jf'
 :map! jf <Esc>
 :inoremap jf <Esc>
 
-" vim-phpqa settings
-" Don't run messdetector on save (default = 1)
-let g:phpqa_messdetector_autorun = 0
+" NERDTree {
+    autocmd vimenter * NERDTree
+    let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
+    let NERDTreeQuitOnOpen=0
+    let NERDTreeMouseMode=2
 
-" Don't run codesniffer on save (default = 1)
-let g:phpqa_codesniffer_autorun = 0
+    function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+     exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+     exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+    endfunction
+    
+    " JavaScript and derivates
+    call NERDTreeHighlightFile('coffee', 'Green', 'none', 'green', '#02023E')
+    call NERDTreeHighlightFile('js', 'Green', 'none', 'green', '#02023E')
+    call NERDTreeHighlightFile('jsx', 'Green', 'none', 'green', '#02023E')
+    " PHP
+    call NERDTreeHighlightFile('php', 'blue', 'none', '#3366FF', '#02023E')
+    " Ruby
+    call NERDTreeHighlightFile('rb', 'Red', 'none', 'red', '#02023E')
 
-" Show code coverage on load (default = 0)
-let g:phpqa_codecoverage_autorun = 0
-
-" NERDTress File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-" JavaScript and derivates
-call NERDTreeHighlightFile('coffee', 'Green', 'none', 'green', '#02023E')
-call NERDTreeHighlightFile('js', 'Green', 'none', 'green', '#02023E')
-call NERDTreeHighlightFile('jsx', 'Green', 'none', 'green', '#02023E')
-" PHP
-call NERDTreeHighlightFile('php', 'blue', 'none', '#3366FF', '#02023E')
-" Ruby
-call NERDTreeHighlightFile('rb', 'Red', 'none', 'red', '#02023E')
-"call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+" }
 
 " Change the colour scheme
 colors darkblue
 
+" Syntastic {
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+    
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+
+    let g:syntastic_quiet_messages = { "type": "style" }
+    let g:syntastic_php_checkers = ['php']
+" }
+
+" PIV {
+    let g:DisableAutoPHPFolding = 1
+" }
