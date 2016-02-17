@@ -1,6 +1,47 @@
-" Vim syntax file
+" Environment {
+
+    " Identify platform {
+        silent function! OSX()
+            return has('macunix')
+        endfunction
+        silent function! LINUX()
+            return has('unix') && !has('macunix') && !has('win32unix')
+        endfunction
+        silent function! WINDOWS()
+            return  (has('win32') || has('win64'))
+        endfunction
+    " }
+
+    " Basics {
+        set nocompatible        " Must be first line
+        if !WINDOWS()
+            set shell=/bin/sh
+        endif
+    " }
+
+    " Windows Compatible {
+        " On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
+        " across (heterogeneous) systems easier.
+        if WINDOWS()
+          set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+        endif
+    " }
+
+    if has('clipboard')
+        if has('unnamedplus')  " When possible use + register for copy-paste
+            set clipboard=unnamed,unnamedplus
+        else         " On mac and Windows, use * register for copy-paste
+            set clipboard=unnamed
+        endif
+    endif
+    
+    " From http://stackoverflow.com/questions/13525518/how-to-hide-the-menu-tool-bar-of-gvim
+    set guioptions-=m  "menu bar
+    set guioptions-=T  "toolbar
+    set guioptions-=r  "scrollbar
 
 " Enable pathogen bundles
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 execute pathogen#helptags()
 
@@ -10,7 +51,6 @@ if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
     filetype plugin indent on
 endif
-
 
 " Tabstops of 4, and prefer spaces to tabs. Text width 80 and wrapping
 " My dark default background and syntax highlighting.
@@ -122,3 +162,4 @@ call NERDTreeHighlightFile('rb', 'Red', 'none', 'red', '#02023E')
 
 " Change the colour scheme
 colors darkblue
+
