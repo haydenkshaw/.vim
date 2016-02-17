@@ -35,15 +35,40 @@
         endif
     endif
     
-    " From http://stackoverflow.com/questions/13525518/how-to-hide-the-menu-tool-bar-of-gvim
-    set guioptions-=m  "menu bar
-    set guioptions-=T  "toolbar
-    set guioptions-=r  "scrollbar
+" From http://vim.wikia.com/wiki/Hide_toolbar_or_menus_to_see_more_text
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+:set guioptions-=L  "remove left-hand scroll bar
 
 " Enable pathogen bundles
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 execute pathogen#helptags()
+
+" Auto reload vimrc on save for all buffers
+" http://stackoverflow.com/questions/4158277/automatically-reload-vimrc-edited-in-a-vim-session-in-an-already-opened-gvim-in
+function! UpdateVimRC()
+    for server in split(serverlist())
+        call remote_send(server, '<Esc>:source $HOME/.vimrc<CR>')
+    endfor
+endfunction
+augroup myvimrchooks
+au!
+    autocmd bufwritepost vimrc call UpdateVimRC()
+augroup END
+
+" better backup, swap and undos storage
+" https://gist.github.com/matagus/3e62179965ded5ce762d
+set directory=~/.vim/temp/swap " directory to place swap files in
+set backup " make backup files
+set backupdir=~/.vim/temp/backups " where to put backup files
+set undofile " persistent undos - undo after you re-open the file
+set undodir=~/.vim/temp/undos
+
+" Make backspace work on Windows http://stackoverflow.com/questions/5419848/backspace-doesnt-work-in-gvim-7-2-64-bit-for-windows
+set backspace=2
+set backspace=indent,eol,start
 
 " Tabstops of 4, and prefer spaces to tabs. Text width 80 and wrapping
 " My dark default background and syntax highlighting.
@@ -66,7 +91,7 @@ execute pathogen#helptags()
 :set undofile
 :set splitbelow
 :set splitright
-
+:set guifont=Consolas:h11
 
 " Added based on http://www.perlmonks.org/index.pl?node_id=441738
 :set smarttab
