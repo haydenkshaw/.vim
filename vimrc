@@ -58,14 +58,6 @@ au!
     autocmd bufwritepost vimrc call UpdateVimRC()
 augroup END
 
-" better backup, swap and undos storage
-" https://gist.github.com/matagus/3e62179965ded5ce762d
-" set directory=~/.vim/temp/swap " directory to place swap files in
-" set backup " make backup files
-" set backupdir=~/.vim/temp/backups " where to put backup files
-" set undofile " persistent undos - undo after you re-open the file
-" set undodir=~/.vim/temp/undos
-
 " Make backspace work on Windows http://stackoverflow.com/questions/5419848/backspace-doesnt-work-in-gvim-7-2-64-bit-for-windows
 set backspace=2
 set backspace=indent,eol,start
@@ -92,7 +84,7 @@ set backspace=indent,eol,start
 :set splitbelow
 :set splitright
 ":set guifont=Menia
-set guifont=Monaco:h12
+set guifont=Monaco:h11
 
 " Added based on http://www.perlmonks.org/index.pl?node_id=441738
 :set smarttab
@@ -117,16 +109,16 @@ set guifont=Monaco:h12
 :inoremap jf <Esc>
 
 " NERDTree {
-    autocmd vimenter * NERDTree
-    let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
-    let NERDTreeQuitOnOpen=0
+    let NERDTreeIgnore=[ '\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$', '\.DS_Store$' ]
     let NERDTreeMouseMode=2
+    let NERDTreeShowHidden=1
+    let NERDTreeKeepTreeInNewTab=1
 
     function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
      exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
      exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
     endfunction
-    
+
     " JavaScript and derivates
     call NERDTreeHighlightFile('coffee', 'Green', 'none', 'green', '#02023E')
     call NERDTreeHighlightFile('js', 'Green', 'none', 'green', '#02023E')
