@@ -60,11 +60,11 @@ augroup END
 
 " better backup, swap and undos storage
 " https://gist.github.com/matagus/3e62179965ded5ce762d
-set directory=~/.vim/temp/swap " directory to place swap files in
-set backup " make backup files
-set backupdir=~/.vim/temp/backups " where to put backup files
-set undofile " persistent undos - undo after you re-open the file
-set undodir=~/.vim/temp/undos
+" set directory=~/.vim/temp/swap " directory to place swap files in
+" set backup " make backup files
+" set backupdir=~/.vim/temp/backups " where to put backup files
+" set undofile " persistent undos - undo after you re-open the file
+" set undodir=~/.vim/temp/undos
 
 " Make backspace work on Windows http://stackoverflow.com/questions/5419848/backspace-doesnt-work-in-gvim-7-2-64-bit-for-windows
 set backspace=2
@@ -91,7 +91,8 @@ set backspace=indent,eol,start
 :set undofile
 :set splitbelow
 :set splitright
-:set guifont=Consolas:h11
+":set guifont=Menia
+set guifont=Monaco:h12
 
 " Added based on http://www.perlmonks.org/index.pl?node_id=441738
 :set smarttab
