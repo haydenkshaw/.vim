@@ -30,3 +30,4 @@ I used brew to install MacVim and PHP 7.
 ## Other people's Vim configuration's to take ideas from
  - https://github.com/spf13/spf13-vim
  - https://github.com/amix/vimrc
+ - https://github.com/scrooloose/nerdtree/commit/677a83b2b63fda1c52205acd39973fe1b44e8b54
