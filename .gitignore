@@ -1,7 +1,8 @@
-# Vim generate files #
+# Vim generated files #
 ############
 *.swp
 _viminfo
+*.un~
 
 # OS generated files #
 ######################
