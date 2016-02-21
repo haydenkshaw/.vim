@@ -17,4 +17,4 @@
 # differences from the previous HEAD if different, or set working dir metadata
 # properties.
 
-git submodule update
+git submodule foreach "git checkout master && git pull origin master"
