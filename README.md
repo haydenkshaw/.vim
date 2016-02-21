@@ -3,6 +3,8 @@ This is a set of [Vim](http://www.vim.org/about.php) plug-ins and configuration 
 
 Feel free to use/ridicule. It may not be very useful on environments other than described above.
 
+I also use this font with it: https://github.com/adobe-fonts/source-code-pro
+
 ## Installation
 ### Windows 10 
 I used [Chocolatey](https://chocolatey.org/) to install Gvim and PHP 7.
