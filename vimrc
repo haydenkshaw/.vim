@@ -8,8 +8,8 @@ if has('win32') || has('win64')
 endif
 
 " Use Pathogen to load Vim plug-ins
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
+runtime plugins/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect('plugins/{}')
 execute pathogen#helptags()
 
 " Turn backup and swap off
