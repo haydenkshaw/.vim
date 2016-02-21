@@ -149,5 +149,5 @@ function! UpdateVimRC()
 endfunction
 augroup myvimrchooks
 au!
-    autocmd bufwritepost vimrc call UpdateVimRC()
+    autocmd bufwritepost .vimrc call UpdateVimRC()
 augroup END
