@@ -1,9 +1,7 @@
 # Hayden Shaw's Vim configuration
 This is a set of [Vim](http://www.vim.org/about.php) plug-ins and configuration I like to use to develop things. I use this on [OS X El Capitan](https://en.wikipedia.org/wiki/OS_X_El_Capitan) using [MacVim](https://github.com/macvim-dev/macvim) and [Windows 10](https://en.wikipedia.org/wiki/Windows_10) using [Gvim](http://www.vim.org/download.php#pc). 
 
-Feel free to use/ridicule. It may not be very useful on environments other than described above.
-
-I also use this font with it: https://github.com/adobe-fonts/source-code-pro
+Feel free to use/ridicule it.
 
 ## Installation
 ### Windows 10 
@@ -27,7 +25,12 @@ I used brew to install MacVim and PHP 7.
  2. Ensure git is installed
  3. git clone to home dir
  4. `git submodule init && git submodule update`
- 5. (Optional `brew install php70 --with-pear`)
+ 5. `ln -s ~/.vim/.vimrc ~/.vimrc`
+ 6. `ln -h ~/.vim/git_hooks/post-merge ~/.vim/.git/hooks/post-merge`
+ 7. `ln -h ~/.vim/git_hooks/post-checkout ~/.vim/.git/hooks/post-checkout`
+ 8. (Optional `brew install php70 --with-pear`)
+ 9. (Optional install font [Source Code Pro](https://github.com/adobe-fonts/source-code-pro))
+ 
 
 ## Other people's Vim configuration's to take ideas from
  - https://github.com/spf13/spf13-vim
