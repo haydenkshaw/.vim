@@ -51,7 +51,13 @@ set wildmode=list:longest
 set undofile
 set splitbelow
 set splitright
-set guifont=Source_Code_Pro:h11:cANSI
+
+if has('macunix')
+    set guifont=Source\ Code\ Pro:h11
+endif
+if has('win32') || has('win64')
+    set guifont=Source_Code_Pro:h11:cANSI
+endif
 
 " Added based on http://www.perlmonks.org/index.pl?node_id=441738
 set smarttab
