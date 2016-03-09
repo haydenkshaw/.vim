@@ -74,6 +74,7 @@ autocmd FileType css set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType js set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType jsx set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType ruby set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType haml set shiftwidth=2 tabstop=2 softtabstop=2
 
 " Change the colour scheme
 colors darkblue
