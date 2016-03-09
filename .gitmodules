@@ -14,3 +14,6 @@
 [submodule "plugins/vim-nerdtree-tabs"]
 	path = plugins/vim-nerdtree-tabs
 	url = git://github.com/jistr/vim-nerdtree-tabs
+[submodule "plugins/vim-pathogen"]
+	path = plugins/vim-pathogen
+	url = git://github.com/tpope/vim-pathogen.git
