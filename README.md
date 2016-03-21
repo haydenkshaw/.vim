@@ -36,3 +36,10 @@ I used brew to install MacVim and PHP 7.
  - https://github.com/spf13/spf13-vim
  - https://github.com/amix/vimrc
  - https://github.com/scrooloose/nerdtree/commit/677a83b2b63fda1c52205acd39973fe1b44e8b54
+ - 
+ 
+## To add to this readem:
+ - Optional Google Closure-compiler linting instructions [executable here](https://developers.google.com/closure/compiler/docs/gettingstarted_app#the-hello-world-of-the-closure-compiler-application)
+ - or using Brew for mac
+
+
