@@ -138,6 +138,8 @@ endif
 
     let g:syntastic_quiet_messages = { "type": "style" }
     let g:syntastic_php_checkers = ['php']
+
+    let g:syntastic_javascript_checkers = ['jshint']
 " }
 
 " PIV {
