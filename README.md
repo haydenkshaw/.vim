@@ -30,16 +30,11 @@ I used brew to install MacVim and PHP 7.
  7. `ln -h ~/.vim/git_hooks/post-checkout ~/.vim/.git/hooks/post-checkout`
  8. (Optional `brew install php70 --with-pear`)
  9. (Optional install font [Source Code Pro](https://github.com/adobe-fonts/source-code-pro))
+ 10. (Optional `brew install node && npm install -g jshint`)
+ 11. (Optional `brew install ruby`)
  
 
 ## Other people's Vim configuration's to take ideas from
  - https://github.com/spf13/spf13-vim
  - https://github.com/amix/vimrc
  - https://github.com/scrooloose/nerdtree/commit/677a83b2b63fda1c52205acd39973fe1b44e8b54
- - 
- 
-## To add to this readem:
- - Optional Google Closure-compiler linting instructions [executable here](https://developers.google.com/closure/compiler/docs/gettingstarted_app#the-hello-world-of-the-closure-compiler-application)
- - or using Brew for mac
-
-
