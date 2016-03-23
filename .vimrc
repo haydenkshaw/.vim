@@ -35,7 +35,7 @@ set backspace=indent,eol,start
 set nocompatible
 set encoding=utf-8
 set expandtab
-set textwidth=80
+set textwidth=0 " Disable auto newline
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -71,13 +71,12 @@ set hlsearch
 " 2-space tab-width for HTML, CSS, JS and Ruby
 autocmd FileType html set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css set shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType js set shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType jsx set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType ruby set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType haml set shiftwidth=2 tabstop=2 softtabstop=2
 
 " Change the colour scheme
-colors darkblue
+colorscheme solarized
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remaps
@@ -144,6 +143,11 @@ endif
 
 " PIV {
     let g:DisableAutoPHPFolding = 1
+" }
+
+" vim-colors-solarized {
+    set background=dark
+    colorscheme solarized
 " }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
