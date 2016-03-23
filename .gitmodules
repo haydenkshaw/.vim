@@ -20,3 +20,6 @@
 [submodule "plugins/vim-colors-solarized"]
 	path = plugins/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
+[submodule "plugins/vim-airline"]
+	path = plugins/vim-airline
+	url = https://github.com/vim-airline/vim-airline

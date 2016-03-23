@@ -25,7 +25,7 @@ set guioptions-=T  " Removes toolbar
 set guioptions-=r  " Removes right-hand scroll bar
 set guioptions-=L  " Removes left-hand scroll bar
 
-" Make backspace work on Windows 
+" Make backspace work on Windows
 " http://stackoverflow.com/questions/5419848/backspace-doesnt-work-in-gvim-7-2-64-bit-for-windows
 set backspace=2
 set backspace=indent,eol,start
@@ -94,7 +94,7 @@ if has("gui_running")
     inoremap <C-C> <Esc>"+y
 
     " Ctrl-V pastes in normal mode  and insert mode
-    noremap <C-V> "+gP   
+    noremap <C-V> "+gP
     inoremap <C-V> <Esc>"+gP
 
     " Ctrl-S saves document in normal, visual and insert mode
@@ -111,12 +111,12 @@ endif
     let NERDTreeMouseMode=2
     let NERDTreeShowHidden=1
     let NERDTreeKeepTreeInNewTab=1
-    
+
     function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
         exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
         exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
     endfunction
-    
+
     " JavaScript and derivates
     call NERDTreeHighlightFile('coffee', 'Green', 'none', 'green', '#02023E')
     call NERDTreeHighlightFile('js', 'Green', 'none', 'green', '#02023E')
@@ -131,7 +131,7 @@ endif
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*
-    
+
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
 
