@@ -8,17 +8,33 @@ Feel free to use/ridicule it.
 I used [Chocolatey](https://chocolatey.org/) to install Gvim and PHP 7.
 
 **Step-by-step**:
- 1. Install Chocolatey by following the instructions [here](https://chocolatey.org)
- 2. Install Vim using Chocolatey by following the instructions [here](https://chocolatey.org/packages/vim)
- 3. Install Git using Chocolatey by following the instructions [here](https://chocolatey.org/packages/git)
- 4. Clone this repository by running the following command from command line or PowerShell: `git clone https://github.com/haydenkshaw/.vim.git %USERPROFILE%/.vim`
- 5. Set up symlinks by running the file [windows_symlink_setup.cmd](https://github.com/haydenkshaw/.vim/blob/master/windows_symlink_setup.cmd) or by running the following command from command line or PowerShell: `call %USERPROFILE%/.vim/windows_symlink_setup.cmd`
- 6. Install and update all Vim plugins by running the following command from command line or PowerShell: `git checkout %USERPROFILE%`
- 7. (Optional) Enable PHP syntax checking by installing PHP using Chocolatey by following the instructions [here](https://chocolatey.org/packages/php)
- 8. (Optional) Enable JS syntax checking by installing [JSHint](https://www.npmjs.com/package/jshint): 
- ..1. Install Node.js using Chocolatey by following the instructions [here](https://chocolatey.org/packages/nodejs)
- ..2. Install JSHint using NPM by running the following command from command line or PowerShell: `npm install jshint`
- 9. (Optional) Install font [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
+1. Install Chocolatey; [instructions](https://chocolatey.org)
+2. Install Vim using Chocolatey; [instructions](https://chocolatey.org/packages/vim)
+3. Install Git using Chocolatey; [instructions](https://chocolatey.org/packages/git)
+4. Clone this repository using the following command:
+```
+git clone https://github.com/haydenkshaw/.vim.git %USERPROFILE%/.vim
+```
+
+5. Set up symlinks using the following command:
+```
+call %USERPROFILE%/.vim/windows_symlink_setup.cmd`
+```
+
+6. Install and update Vim plugins using the following command:
+```
+git checkout %USERPROFILE%/.vim
+```
+
+7. (Optional) Enable PHP syntax checking by installing PHP using Chocolatey; [instructions](https://chocolatey.org/packages/php)
+8. (Optional) Enable JS syntax checking by installing [JSHint](https://www.npmjs.com/package/jshint): 
+..1. Install Node.js using Chocolatey; [instructions](https://chocolatey.org/packages/nodejs)
+..2. Install JSHint using NPM by using the following command: 
+```
+npm install jshint
+```
+
+9. (Optional) Install font [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
 
 ### OS X El Capitan
 I used brew to install MacVim and PHP 7.
