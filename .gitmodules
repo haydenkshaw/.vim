@@ -25,3 +25,6 @@
 [submodule "plugins/vim-airline"]
 	path = plugins/vim-airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule "plugins/indentLine"]
+	path = plugins/indentLine
+	url = https://github.com/Yggdroot/indentLine

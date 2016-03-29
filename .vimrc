@@ -118,13 +118,13 @@ endif
     endfunction
 
     " JavaScript and derivates
-    call NERDTreeHighlightFile('coffee', 'Green', 'none', 'green', '#02023E')
-    call NERDTreeHighlightFile('js', 'Green', 'none', 'green', '#02023E')
-    call NERDTreeHighlightFile('jsx', 'Green', 'none', 'green', '#02023E')
+    call NERDTreeHighlightFile('coffee', 'Green', 'none', 'green', 'NONE')
+    call NERDTreeHighlightFile('js', 'Green', 'none', 'green', 'NONE')
+    call NERDTreeHighlightFile('jsx', 'Green', 'none', 'green', 'NONE')
     " PHP
-    call NERDTreeHighlightFile('php', 'blue', 'none', '#3366FF', '#02023E')
+    call NERDTreeHighlightFile('php', 'blue', 'none', '#3366FF', 'NONE')
     " Ruby
-    call NERDTreeHighlightFile('rb', 'Red', 'none', 'red', '#02023E')
+    call NERDTreeHighlightFile('rb', 'Red', 'none', 'red', 'NONE')
 " }
 
 " syntastic {
@@ -148,6 +148,10 @@ endif
 " vim-colors-solarized {
     set background=dark
     colorscheme solarized
+" }
+
+" indentLine {
+    let g:indentLine_char = '│'
 " }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
