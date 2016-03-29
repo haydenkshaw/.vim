@@ -8,33 +8,31 @@ Feel free to use/ridicule it.
 I used [Chocolatey](https://chocolatey.org/) to install Gvim and PHP 7.
 
 **Step-by-step**:
-1. Install Chocolatey; [instructions](https://chocolatey.org)
-2. Install Vim using Chocolatey; [instructions](https://chocolatey.org/packages/vim)
-3. Install Git using Chocolatey; [instructions](https://chocolatey.org/packages/git)
-4. Clone this repository using the following command:
-```
-git clone https://github.com/haydenkshaw/.vim.git %USERPROFILE%/.vim
-```
+ 1. Install Chocolatey; [instructions](https://chocolatey.org)
+ 2. Install Vim using Chocolatey; [instructions](https://chocolatey.org/packages/vim)
+ 3. Install Git using Chocolatey; [instructions](https://chocolatey.org/packages/git)
+ 4. Clone this repository using the following command:
+ ```
+ git clone https://github.com/haydenkshaw/.vim.git %USERPROFILE%/.vim
+ ```
+ 
+ 5. Set up symlinks using the following command:
+ ```
+ call %USERPROFILE%/.vim/windows_symlink_setup.cmd`
+ ```
 
-5. Set up symlinks using the following command:
-```
-call %USERPROFILE%/.vim/windows_symlink_setup.cmd`
-```
-
-6. Install and update Vim plugins using the following command:
-```
-git checkout %USERPROFILE%/.vim
-```
-
-7. (Optional) Enable PHP syntax checking by installing PHP using Chocolatey; [instructions](https://chocolatey.org/packages/php)
-8. (Optional) Enable JS syntax checking by installing [JSHint](https://www.npmjs.com/package/jshint): 
-..1. Install Node.js using Chocolatey; [instructions](https://chocolatey.org/packages/nodejs)
-..2. Install JSHint using NPM by using the following command: 
-```
-npm install jshint
-```
-
-9. (Optional) Install font [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
+ 6. Install and update Vim plugins using the following command:
+ ```
+ git checkout %USERPROFILE%/.vim
+ ```
+ 7. (Optional) Enable PHP syntax checking by installing PHP using Chocolatey; [instructions](https://chocolatey.org/packages/php)
+ 8. (Optional) Enable JS syntax checking by installing [JSHint](https://www.npmjs.com/package/jshint):
+   1. Install Node.js using Chocolatey; [instructions](https://chocolatey.org/packages/nodejs)
+   2. Install JSHint using NPM by using the following command:
+   ```
+   npm install jshint
+   ```
+ 9. (Optional) Install font [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
 
 ### OS X El Capitan
 I used brew to install MacVim and PHP 7.
