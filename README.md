@@ -5,30 +5,30 @@ Feel free to use/ridicule it.
 
 ## Installation
 ### Windows 10 
-I used [Chocolatey](https://chocolatey.org/) to install Gvim and PHP 7.
+I use [Chocolatey](https://chocolatey.org/), a Windows package manager, to install all software used with this configuration. I think it's pretty neat and a little simpler than going out of your way to get a `.exe` or a `.msi` for each package.
 
 **Step-by-step**:
  1. Install Chocolatey; [instructions](https://chocolatey.org)
  2. Install Vim using Chocolatey; [instructions](https://chocolatey.org/packages/vim)
  3. Install Git using Chocolatey; [instructions](https://chocolatey.org/packages/git)
- 4. Clone this repository using the following command:
+ 4. Clone this repository by running the following command:
  ```
  git clone https://github.com/haydenkshaw/.vim.git %USERPROFILE%/.vim
  ```
  
- 5. Set up symlinks using the following command:
+ 5. Set up symlinks by running the following command:
  ```
- call %USERPROFILE%/.vim/windows_symlink_setup.cmd`
+ call %USERPROFILE%/.vim/windows_symlink_setup.cmd
  ```
 
- 6. Install and update Vim plugins using the following command:
+ 6. Install and update Vim plugins by running the following command:
  ```
  git checkout %USERPROFILE%/.vim
  ```
  7. (Optional) Enable PHP syntax checking by installing PHP using Chocolatey; [instructions](https://chocolatey.org/packages/php)
  8. (Optional) Enable JS syntax checking by installing [JSHint](https://www.npmjs.com/package/jshint):
    1. Install Node.js using Chocolatey; [instructions](https://chocolatey.org/packages/nodejs)
-   2. Install JSHint using NPM by using the following command:
+   2. Install JSHint using NPM by by running the following command:
    ```
    npm install jshint
    ```
