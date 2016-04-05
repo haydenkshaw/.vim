@@ -13,3 +13,7 @@ _viminfo
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Repo specific files #
+#######################
+colors

@@ -40,5 +40,10 @@ IF EXIST %USERPROFILE%\.vim\.git\hooks\post-merge del /F %USERPROFILE%\.vim\.git
 call mklink "%USERPROFILE%\.vim\.git\hooks\post-merge" "%USERPROFILE%\.vim\git_hooks\post-merge"
 
 ECHO.
+IF NOT EXIST %USERPROFILE%\.vim\colors MKDIR %USERPROFILE%\.vim\colors
+IF EXIST %USERPROFILE%\.vim\colors\solarized.vim del /F %USERPROFILE%\.vim\colors\solarized.vim
+call mklink "%USERPROFILE%\.vim\colors\solarized.vim" "%USERPROFILE%\.vim\plugins\vim-colors-solarized\colors\solarized.vim"
+
+ECHO.
 ECHO All operations complete. Program will close in 10 seconds.
 TIMEOUT /T 10

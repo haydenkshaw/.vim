@@ -17,12 +17,18 @@ set nobackup
 set nowb
 set noswapfile
 
+" Save undo files in a less annoying place
+" Inspiration by http://stackoverflow.com/questions/4331776/change-vim-swap-backup-undo-file-name
+if exists("+undofile")
+  set undodir=~/.vim/undo//
+  set undofile
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Aesthetics
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set guioptions-=m  " Removes menu bar
 set guioptions-=T  " Removes toolbar
-set guioptions-=r  " Removes right-hand scroll bar
 set guioptions-=L  " Removes left-hand scroll bar
 
 " Make backspace work on Windows
@@ -73,10 +79,8 @@ autocmd FileType html set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType ruby set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType php set shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType haml set shiftwidth=2 tabstop=2 softtabstop=2
-
-" Change the colour scheme
-colorscheme solarized
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remaps
