@@ -10,7 +10,6 @@ endif
 " Use Pathogen to load Vim plug-ins
 runtime plugins/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect('plugins/{}')
-execute pathogen#helptags()
 
 " Turn backup and swap off
 set nobackup
