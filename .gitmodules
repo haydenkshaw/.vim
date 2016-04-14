@@ -28,3 +28,6 @@
 [submodule "plugins/indentLine"]
 	path = plugins/indentLine
 	url = https://github.com/Yggdroot/indentLine
+[submodule "plugins/vim-fugitive"]
+	path = plugins/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
