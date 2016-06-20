@@ -1,3 +1,5 @@
+set nocompatible
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => First bits
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -26,9 +28,19 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Aesthetics
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set guioptions-=m  " Removes menu bar
-set guioptions-=T  " Removes toolbar
-set guioptions-=L  " Removes left-hand scroll bar
+
+if has('gui_running')
+  set guioptions-=m  " Removes menu bar
+  set guioptions-=T  " Removes toolbar
+  set guioptions-=L  " Removes left-hand scroll bar
+
+  if has('macunix')
+    set guifont=Source\ Code\ Pro:h11
+  endif
+  if has('win32') || has('win64')
+    set guifont=Source_Code_Pro:h11:cANSI
+  endif
+endif
 
 " Make backspace work on Windows
 " http://stackoverflow.com/questions/5419848/backspace-doesnt-work-in-gvim-7-2-64-bit-for-windows
@@ -37,7 +49,6 @@ set backspace=indent,eol,start
 
 " Tabstops of 4, and prefer spaces to tabs. Text width 80 and wrapping
 " My dark default background and syntax highlighting.
-set nocompatible
 set encoding=utf-8
 set expandtab
 set textwidth=0 " Disable auto newline
@@ -56,13 +67,6 @@ set wildmode=list:longest
 set undofile
 set splitbelow
 set splitright
-
-if has('macunix')
-    set guifont=Source\ Code\ Pro:h11
-endif
-if has('win32') || has('win64')
-    set guifont=Source_Code_Pro:h11:cANSI
-endif
 
 " Added based on http://www.perlmonks.org/index.pl?node_id=441738
 set smarttab
@@ -95,10 +99,6 @@ if has("gui_running")
     " Ctrl-C copies in normal mode and insert mode
     noremap <C-C> "+y
     inoremap <C-C> <Esc>"+y
-
-    " Ctrl-V pastes in normal mode  and insert mode
-    noremap <C-V> "+gP
-    inoremap <C-V> <Esc>"+gP
 
     " Ctrl-S saves document in normal, visual and insert mode
     noremap  <C-S> :w<CR>
@@ -138,8 +138,8 @@ endif
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
 
-    let g:syntastic_quiet_messages = { "type": "style" }
-    let g:syntastic_php_checkers = ['php']
+    let g:syntastic_php_checkers = ['php', 'phpcs']
+    let g:syntastic_php_phpcs_args = '--standard=PSR2 -n'
 
     let g:syntastic_javascript_checkers = ['jshint']
 " }
