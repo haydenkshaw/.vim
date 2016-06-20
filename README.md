@@ -1,7 +1,7 @@
 # Hayden Shaw's Vim configuration
 This is a set of [Vim](http://www.vim.org/about.php) plug-ins and configuration I like to use to develop things. I use this on [OS X El Capitan](https://en.wikipedia.org/wiki/OS_X_El_Capitan) using [MacVim](https://github.com/macvim-dev/macvim) and [Windows 10](https://en.wikipedia.org/wiki/Windows_10) using [Gvim](http://www.vim.org/download.php#pc). 
 
-Feel free to use/ridicule it.
+Feel free to use it, or not. A text editor from 1991 isn't everyone's cup of tea.
 
 ## Installation
 ### Windows 10 
