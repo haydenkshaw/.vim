@@ -18,12 +18,12 @@ I use [Chocolatey](https://chocolatey.org/), a Windows package manager, to insta
  
  5. Set up symlinks by running the following command:
  ```
- call %USERPROFILE%/.vim/windows_symlink_setup.cmd
+ cd %USERPROFILE%/.vim && call windows_symlink_setup.cmd
  ```
 
  6. Install and update Vim plugins by running the following command:
  ```
- git checkout %USERPROFILE%/.vim
+ cd %USERPROFILE%/.vim && git checkout
  ```
  7. (Optional) Enable PHP syntax checking by installing PHP using Chocolatey; [instructions](https://chocolatey.org/packages/php)
  8. (Optional) Enable JS syntax checking by installing [JSHint](https://www.npmjs.com/package/jshint):
