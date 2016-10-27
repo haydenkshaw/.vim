@@ -138,7 +138,8 @@ endif
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
 
-    let g:syntastic_php_checkers = ['php', 'phpcs']
+    " let g:syntastic_php_checkers = ['php'] " Enable PHP syntax checking
+    let g:syntastic_php_checkers = ['php', 'phpcs'] " Enable PHP syntax and style checking
     let g:syntastic_php_phpcs_args = '--standard=PSR2 -n'
 
     let g:syntastic_javascript_checkers = ['jshint']
