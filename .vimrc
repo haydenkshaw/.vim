@@ -84,6 +84,7 @@ autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType ruby set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType php set shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType haml set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType sh set shiftwidth=2 tabstop=2 softtabstop=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remaps
