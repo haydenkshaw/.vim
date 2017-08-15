@@ -143,7 +143,7 @@ endif
     let g:syntastic_php_checkers = ['php', 'phpcs'] " Enable PHP syntax and style checking
     let g:syntastic_php_phpcs_args = '--standard=PSR2 -n'
 
-    let g:syntastic_javascript_checkers = ['jshint']
+    let g:syntastic_javascript_checkers = ['eslint']
 " }
 
 " PIV {
