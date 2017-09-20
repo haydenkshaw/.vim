@@ -87,7 +87,7 @@ autocmd FileType haml set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType sh set shiftwidth=2 tabstop=2 softtabstop=2
 
 " Disable JSON concealing introduced in Vim 7.3
-set conceallevel=0
+let g:vim_json_syntax_conceal = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remaps
