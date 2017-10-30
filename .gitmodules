@@ -40,3 +40,6 @@
 [submodule "plugins/vim-json"]
 	path = plugins/vim-json
 	url = https://github.com/elzr/vim-json
+[submodule "plugins/fzf.vim"]
+	path = plugins/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git

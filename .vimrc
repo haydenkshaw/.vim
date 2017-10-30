@@ -81,6 +81,7 @@ set hlsearch
 autocmd FileType html set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType json set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType ruby set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType php set shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType haml set shiftwidth=2 tabstop=2 softtabstop=2
@@ -164,6 +165,18 @@ endif
 
 " vim.json {
     set conceallevel=0
+" }
+
+" fzf.vim {
+    " Manually add fzf to &runtimepath for Homebrew installed fzf
+    " https://github.com/junegunn/fzf#as-vim-plugin
+    set rtp+=/usr/local/opt/fzf
+
+    " Useful binds as suggested by
+    " https://statico.github.io/vim3.html
+    nmap ; :Buffers<CR>
+    nmap <Leader>t :Files<CR>
+    nmap <Leader>r :Tags<CR>
 " }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
