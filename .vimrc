@@ -115,7 +115,7 @@ endif
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdtree {
-    let NERDTreeIgnore=[ '\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$', '\.DS_Store$' ]
+    let NERDTreeIgnore=[ '\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$', '\.DS_Store$', 'node_modules']
     let NERDTreeMouseMode=2
     let NERDTreeShowHidden=1
     let NERDTreeKeepTreeInNewTab=1
