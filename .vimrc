@@ -115,7 +115,7 @@ endif
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdtree {
-    let NERDTreeIgnore=[ '\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$', '\.DS_Store$', 'node_modules']
+    let NERDTreeIgnore=[ '\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$', '\.DS_Store$', 'node_modules', 'tmp']
     let NERDTreeMouseMode=2
     let NERDTreeShowHidden=1
     let NERDTreeKeepTreeInNewTab=1
@@ -135,19 +135,14 @@ endif
     call NERDTreeHighlightFile('rb', 'Red', 'none', 'red', 'NONE')
 " }
 
-" syntastic {
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
-
-    " let g:syntastic_php_checkers = ['php'] " Enable PHP syntax checking
-    let g:syntastic_php_checkers = ['php', 'phpcs'] " Enable PHP syntax and style checking
-    let g:syntastic_php_phpcs_args = '--standard=PSR2 -n'
-
-    let g:syntastic_javascript_checkers = ['eslint']
+" ALE (Asynchronous Lint Engine) {
+    " Whitelist which linters to use
+    let g:ale_linters = {
+    \   'ruby': ['ruby'],
+    \   'javascript': ['eslint'],
+    \   'json': ['jsonlint'],
+    \   'php': ['php', 'phpcs'],
+    \}
 " }
 
 " PIV {
